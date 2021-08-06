@@ -308,3 +308,32 @@ a {
     border-radius: 10px;
     background-color: var(--white);
 }
+
+/* Match Info Section Responsive */
+@media only screen and (max-width: 1200px) {
+    .match-info .grid .half-width:first-child {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .match-info .grid .half-width .title hr {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .match-info .grid .half-width .title {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    .match-info .grid {
+        height: auto;
+        display: grid;
+        padding: 30px 0;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
