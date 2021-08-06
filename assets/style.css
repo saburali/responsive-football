@@ -6,6 +6,7 @@
     --iconColor: #969BAB;
     --themeColor: #E02C6D;
     --detailsColor: #383838;
+    --bannerBGcolor: #2D25A0;
     --secondaryColor: #80808029;
 }
 
@@ -101,11 +102,172 @@ a {
     }
 }
 
+/*---------------------------\
+     Navbar Section Start
+\---------------------------*/
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    padding-top: 20px;
+    background-color: var(--bannerBGcolor);
+}
+
+.navbar {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center
+}
+
+.navbar .menu li {
+    list-style: none;
+}
+
+.navbar .menu li a {
+    opacity: 0.8;
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-right: 12px;
+    color: var(--white);
+    transition: 0.4s all ease-in-out;
+}
+
+.navbar .menu li:hover a {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar .menu.logout li a {
+    opacity: 1;
+}
+
+.navbar .menu li:last-child a span {
+    display: none;
+}
+
+/* Responsive */
+/* Toggle Button */
+.chk-btn {
+    float: right;
+    display: none;
+}
+
+.chk-btn img {
+    width: 22px;
+    display: none;
+    margin-right: 20px;
+}
+
+#chk {
+    z-index: -9;
+    display: none;
+    visibility: hidden;
+    position: absolute;
+}
+
+/* Responsive Navbar */
+@media only screen and (max-width: 992px) {
+    header {
+        padding-top: 12px;
+    }
+
+    .navbar .menu li a {
+        font-size: 11px;
+        padding: 5px 8px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header {
+        padding-top: 20px;
+    }
+
+    .navbar .menu {
+        left: 0;
+        right: 0;
+        top: 50px;
+        padding: 0;
+        height: 0px;
+        width: 100%;
+        z-index: 99;
+        display: block;
+        position: absolute;
+        transition: 0.7s;
+        overflow-y: hidden;
+        text-align: center;
+        line-height: normal;
+        background-color: #4422d4;
+        box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    }
+
+    .navbar .menu li a {
+        display: block;
+        font-size: 14px;
+        padding: 25px 12px;
+
+    }
+
+    .navbar .menu li:last-child a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .menu li:last-child a img {
+        padding-right: 18px;
+    }
+
+    .navbar #chk:checked ~ .menu {
+        height: 90vh;
+    }
+
+    navbar #chk:checked ~ .menu.logout,
+    .navbar .menu.logout {
+        top: -8px;
+        right: 12px;
+        height: auto !important;
+        box-shadow: none;
+        position: relative;
+        background-color: transparent;
+    }
+
+    .navbar .menu.logout li a {
+        font-size: 14px;
+        padding: 6px 12px;
+        display: inline-block;
+    }
+
+    .navbar .menu.logout li {
+        text-align: right;
+    }
+
+    .chk-btn,
+    .navbar #chk,
+    .navbar .chk-btn img,
+    .navbar .menu li:last-child a span {
+        display: block;
+    }
+
+    .navbar .chk-btn img {
+        top: -6px;
+        left: 12px;
+        position: relative;
+    }
+}
+
 /****************************\
      Banner Section Start
 \****************************/
 .banner {
-    background-color: #2D25A0;
+    background-color: var(--bannerBGcolor);
 }
 
 .banner-content {
