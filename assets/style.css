@@ -54,6 +54,11 @@ a {
     font-weight: 700;
 }
 
+.title:first-letter,
+.sm-title:first-letter {
+    color: var(--themeColor);
+}
+
 .flex {
     display: flex;
 }
@@ -210,7 +215,6 @@ a {
 
 .players .player:hover {
     top: -7px;
-    padding-top: 18px;
     transition: all 0.4s ease-in-out;
 }
 
@@ -344,7 +348,7 @@ a {
 \****************************/
 .footer-img,
 .footer-icon {
-    margin: 50px 0;
+    margin: 50px 0 18px 0;
     justify-content: center;
 }
 
@@ -394,6 +398,11 @@ a {
     margin-bottom: 0;
     text-align: center;
     letter-spacing: 1.5px;
+}
+
+.copyright p:first-letter {
+    font-weight: bold;
+    color: var(--themeColor);
 }
 
 .copyright p a {
