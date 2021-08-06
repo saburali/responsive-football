@@ -510,8 +510,208 @@ header {
 }
 
 /****************************\
-   Footer Section Start
+      Live Section Start
 \****************************/
+.live {
+    width: 100%;
+    height: 50vh;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.live .container {
+    position: relative;
+}
+
+.live .title.t-name {
+    top: 175px;
+    left: -80px;
+    text-align: center;
+    position: absolute;
+    opacity: 1;
+    transition-delay: 0.4s;
+    transform: rotate(-90deg);
+    transition: opacity 0.4s ease-in-out;
+}
+
+.live:hover .title.t-name {
+    opacity: 0;
+    transition-delay: 0.4s;
+}
+
+.live .live-content {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.live .live-content .half-width {
+    width: 100%;
+}
+
+.live .live-content .half-width:last-child {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.live .live-content img {
+    width: 498%;
+    right: -30px;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.live .live-content:hover img {
+    transform: scale(0);
+
+}
+
+.live .live-content .live-palyer-text .title {
+    text-align: right;
+    white-space: nowrap;
+    transform: scale(0);
+    transition: transform 0.4s ease-in-out;
+    transition-delay: 0.4s;
+}
+
+.live .live-content:hover .live-palyer-text .title {
+    transform: scale(1);
+}
+
+.live .video-ply-btn {
+    padding-top: 40%;
+    padding-left: 60px;
+}
+
+.live .video-ply-btn {
+    z-index: 9;
+    top: -47px;
+    right: 27px;
+    position: relative;
+}
+
+.live .video-ply-btn a {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    position: relative;
+    z-index: 9;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 28px;
+    color: var(--themeColor);
+    z-index: 9;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-box-shadow: 0px 0px 10px 0px rgb(72 88 238 / 20%);
+    box-shadow: 0px 0px 10px 0px rgb(72 88 238 / 20%);
+}
+
+.live .video-ply-btn i {
+    top: 15px;
+    left: 10px;
+    font-size: 60px;
+    position: relative;
+}
+
+.live .video-ply-btn a:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 140px;
+    width: 140px;
+    border: 3px solid var(--themeColor);
+    border-radius: 50%;
+    -webkit-animation: icon-bubble 1s infinite forwards linear 0.5s;
+    animation: icon-bubble 1s infinite forwards linear 0.5s;
+}
+
+.live .video-ply-btn a:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 140px;
+    width: 140px;
+    border: 3px solid var(--themeColor);
+    border-radius: 50%;
+    -webkit-animation: icon-bubble 1s infinite forwards linear;
+    animation: icon-bubble 1s infinite forwards linear;
+}
+
+.live .live-palyer {
+    background: var(--bannerBGcolor);
+    height: 339px;
+    width: 370px;
+    position: relative;
+    top: -20px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+@-webkit-keyframes icon-bubble {
+    0% {
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+        opacity: 1;
+    }
+    25% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0.55;
+    }
+    75% {
+        -webkit-transform: scale(1.32);
+        transform: scale(1.32);
+        opacity: 0.3;
+    }
+    100% {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes icon-bubble {
+    0% {
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+        opacity: 1;
+    }
+    25% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    50% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        opacity: 0.55;
+    }
+    75% {
+        -webkit-transform: scale(1.32);
+        transform: scale(1.32);
+        opacity: 0.3;
+    }
+    100% {
+        -webkit-transform: scale(1.4);
+        transform: scale(1.4);
+        opacity: 0;
+    }
+}
+
+    /****************************\
+       Footer Section Start
+    \****************************/
 .footer-img,
 .footer-icon {
     margin: 50px 0 18px 0;
