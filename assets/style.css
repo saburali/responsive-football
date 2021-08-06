@@ -3,6 +3,7 @@
 
 :root {
     --white: #ffffff;
+    --iconColor: #969BAB;
     --themeColor: #E02C6D;
     --detailsColor: #383838;
     --secondaryColor: #80808029;
@@ -339,13 +340,46 @@ a {
 }
 
 /****************************\
-   Footer Img Section Start
+   Footer Section Start
 \****************************/
-.footer-img {
+.footer-img,
+.footer-icon {
     margin: 50px 0;
     justify-content: center;
 }
 
 .footer-img img {
     width: 250px;
+}
+
+.footer-icon {
+    margin: 0;
+}
+
+.footer-icon li {
+    list-style: none;
+}
+
+.footer-icon li a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    margin-left: 10px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryColor);
+}
+
+.footer-icon li a i {
+    padding: 8px;
+    font-size: 16px;
+    transform: scale(1);
+    color: var(--iconColor);
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-icon li a:hover i {
+    transform: scale(1.5);
+    color: var(--themeColor);
 }
