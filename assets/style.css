@@ -383,3 +383,26 @@ a {
     transform: scale(1.5);
     color: var(--themeColor);
 }
+
+.copyright {
+    margin: 25px 0 50px 0;
+}
+
+.copyright p {
+    color: var(--iconColor);
+    font-size: 20px;
+    margin-bottom: 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.copyright p a {
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--iconColor);
+    transition: all 0.4s ease-in-out;
+}
+
+.copyright p:hover a {
+    letter-spacing: 1px;
+}
