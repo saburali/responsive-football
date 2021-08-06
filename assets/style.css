@@ -560,21 +560,20 @@ header {
     right: -30px;
     position: relative;
     transform: scale(1);
-    transition: transform 0.4s ease-in-out;
     transition-delay: 0.4s;
+    transition: transform 0.4s ease-in-out;
 }
 
 .live .live-content:hover img {
     transform: scale(0);
-
 }
 
 .live .live-content .live-palyer-text .title {
     text-align: right;
     white-space: nowrap;
     transform: scale(0);
-    transition: transform 0.4s ease-in-out;
     transition-delay: 0.4s;
+    transition: transform 0.4s ease-in-out;
 }
 
 .live .live-content:hover .live-palyer-text .title {
@@ -709,9 +708,107 @@ header {
     }
 }
 
-    /****************************\
-       Footer Section Start
-    \****************************/
+/* Live Show Section Responsive */
+@media only screen and (max-width: 1200px) {
+    .live,
+    .live .container {
+        overflow: hidden;
+    }
+
+    .live .title.t-name {
+        top: 130px;
+        left: -40px;
+        font-size: 50px;
+    }
+
+    .live .live-palyer {
+        width: 325px;
+        height: 300px;
+    }
+
+    .live .live-content .live-palyer-text .title {
+        font-size: 28px;
+        line-height: 75px;
+    }
+
+    .live .live-content img {
+        top: -8px;
+        width: 186%;
+    }
+}
+
+@media only screen and (max-width: 986px) {
+    .live,
+    .live .container {
+        height: auto;
+    }
+
+    .live .live-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .live .live-content img {
+        top: 0;
+        right: 0;
+        width: 100%;
+        width: 100%;
+    }
+
+    .live .title.t-name {
+        top: 0;
+        left: 0;
+        opacity: 1;
+        font-size: 32px;
+        text-align: center;
+        position: relative;
+        margin-bottom: -5px;
+        transform: rotate(0deg);
+    }
+
+    .live:hover .title.t-name {
+        opacity: 1;
+    }
+
+    .live .live-content:hover img {
+        transform: scale(1);
+    }
+
+    .live .live-content .live-palyer-text .title {
+        display: none;
+    }
+
+    .live .live-palyer {
+        top: 0;
+        width: auto;
+        height: auto;
+        position: static;
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .live .video-ply-btn {
+        z-index: 9;
+        top: 18%;
+        left: 46%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .live {
+        padding: 20px 0;
+    }
+
+    .live .video-ply-btn {
+        top: 30%;
+        left: 40%;
+    }
+}
+
+/****************************\
+     Footer Section Start
+\****************************/
 .footer-img,
 .footer-icon {
     margin: 50px 0 18px 0;
