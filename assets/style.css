@@ -4,6 +4,8 @@
 :root {
     --white: #ffffff;
     --themeColor: #E02C6D;
+    --detailsColor: #383838;
+    --secondaryColor: #80808029;
 }
 
 /* Common Style */
@@ -233,6 +235,7 @@ a {
     display: -webkit-box;
     -webkit-line-clamp: 4;
     text-overflow: ellipsis;
+    color: var(--detailsColor);
     -webkit-box-orient: vertical;
 }
 
@@ -263,4 +266,45 @@ a {
     .players .player .sm-title {
         font-size: 24px;
     }
+}
+
+/****************************\
+   Match Info Section Start
+\****************************/
+.match-info {
+    background-color: var(--secondaryColor);
+}
+
+.match-info .grid {
+    height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.match-info .grid .half-width:first-child {
+    text-align: left;
+    padding-left: 6%;
+}
+
+.match-info .grid .half-width:last-child {
+    text-align: right;
+}
+
+.match-info .title {
+    font-size: 45px;
+    line-height: 65px;
+}
+
+.match-info p {
+    color: var(--detailsColor);
+    font-size: 15px;
+    text-align: justify;
+}
+
+.match-info img {
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--white);
 }
