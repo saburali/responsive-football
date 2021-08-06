@@ -140,6 +140,10 @@ header {
     transition: 0.4s all ease-in-out;
 }
 
+.navbar .menu.logout li a {
+    border-radius: 0;
+}
+
 .navbar .menu li:hover a {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.2);
