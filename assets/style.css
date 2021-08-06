@@ -184,3 +184,47 @@ a {
         animation: imgZoom-inout 5s linear infinite;
     }
 }
+
+/****************************\
+     Player Section Start
+\****************************/
+.players {
+    margin: 65px 0;
+    grid-row-gap: 35px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.players .player {
+    width: 330px;
+    padding: 25px;
+    margin: 0 20px;
+    position: relative;
+    border-radius: 10px;
+    top: 0;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.players .player:hover {
+    top: -7px;
+    padding-top: 18px;
+    transition: all 0.4s ease-in-out;
+}
+
+.players .player img {
+    bottom: 0;
+    width: 100%;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.players .player:hover  > img {
+    bottom: -7px;
+}
+
+.players .player p {
+    margin-bottom: 0;
+}
+}
