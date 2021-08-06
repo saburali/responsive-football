@@ -807,6 +807,162 @@ header {
 }
 
 /****************************\
+    Contact Section Start
+\****************************/
+.contact {
+    max-width: 1200px;
+    width: 85vw;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.contact h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #163568;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contact h2 span {
+    color: #efefef;
+    padding-right: 5px;
+}
+
+.contact .box {
+    display: grid;
+    box-shadow: 0px 0px 40px rgb(0 0 0 / 15%);
+}
+
+.contact .box .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bannerBGcolor);
+    color: var(--white);
+}
+
+.contact .box .info h4 {
+    margin: 10px 0;
+}
+
+.contact .box .info p {
+    margin: 5px 0px;
+}
+
+.contact .box .info p:nth-child(4) {
+    margin-bottom: 20px;
+}
+
+.contact .box h3 {
+    padding: 10px;
+    background: #efefef;
+}
+
+.contact .box form {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.contact .box form .name, html body .contact .box form .company,
+.contact .box form .email, html body .contact .box form .tele {
+    margin-bottom: 20px;
+}
+
+.contact .box form .name label,
+.contact .box form .company label,
+.contact .box form .email label,
+.contact .box form .tele label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.contact .box form .name input,
+.contact .box form .company input,
+.contact .box form .email input,
+.contact .box form .tele input {
+    padding: 5px;
+    outline: none;
+    border: 1px solid var(--iconColor);
+    width: 95%;
+    height: 60%;
+}
+
+.contact .box form .message {
+    grid-column: 1/3;
+}
+
+.contact .box form .message label {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.contact .box form .message #message {
+    height: 90px;
+    width: 97.5%;
+    padding: 5px;
+    outline: none;
+    border: 1px solid var(--iconColor);
+}
+
+.contact .box form .submit {
+    grid-column: 1/3;
+}
+
+.contact .box form .submit input[type=submit] {
+    cursor: pointer;
+    color: var(--white);
+    background: var(--themeColor);
+    letter-spacing: 0.2em;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    max-width: 80%;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    opacity: 0.9;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact .box form .submit input[type=submit]:hover,
+.contact .box form .submit input[type=submit]:focus {
+    color: #efefef;
+    opacity: 1;
+    background: var(--themeColor);
+}
+
+@media (min-width: 700px) {
+    .contact h2 {
+        justify-content: flex-start;
+        align-items: flex-end;
+        font-size: 2em;
+    }
+
+    .contact .box {
+        padding-right: 32px;
+        grid-template-columns: 1fr 2fr;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .contact .box .info {
+        grid-row: 1/3;
+        font-size: 1.2em;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+/****************************\
      Footer Section Start
 \****************************/
 .footer-img,
