@@ -810,19 +810,20 @@ header {
     Contact Section Start
 \****************************/
 .contact {
-    max-width: 1200px;
     width: 85vw;
     display: grid;
+    margin-top: 30px;
+    max-width: 1200px;
     grid-template-columns: 1fr;
 }
 
 .contact h2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: #163568;
     text-align: center;
     margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact h2 span {
@@ -837,11 +838,11 @@ header {
 
 .contact .box .info {
     display: flex;
+    align-items: center;
+    color: var(--white);
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: var(--bannerBGcolor);
-    color: var(--white);
 }
 
 .contact .box .info h4 {
@@ -878,19 +879,19 @@ header {
 .contact .box form .company label,
 .contact .box form .email label,
 .contact .box form .tele label {
-    font-size: 14px;
     opacity: 0.9;
+    font-size: 14px;
 }
 
 .contact .box form .name input,
 .contact .box form .company input,
 .contact .box form .email input,
 .contact .box form .tele input {
+    width: 95%;
+    height: 60%;
     padding: 5px;
     outline: none;
     border: 1px solid var(--iconColor);
-    width: 95%;
-    height: 60%;
 }
 
 .contact .box form .message {
@@ -915,42 +916,42 @@ header {
 }
 
 .contact .box form .submit input[type=submit] {
-    cursor: pointer;
-    color: var(--white);
-    background: var(--themeColor);
-    letter-spacing: 0.2em;
+    width: 50%;
+    border: none;
+    margin: auto;
+    opacity: 0.9;
     padding: 10px;
     outline: none;
-    border: none;
-    border-radius: 5px;
     display: block;
     max-width: 80%;
-    width: 50%;
-    margin: auto;
+    cursor: pointer;
+    border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    opacity: 0.9;
+    color: var(--white);
+    letter-spacing: 0.2em;
+    background: var(--themeColor);
     transition: all 0.4s ease-in-out;
 }
 
 .contact .box form .submit input[type=submit]:hover,
 .contact .box form .submit input[type=submit]:focus {
-    color: #efefef;
     opacity: 1;
+    color: #efefef;
     background: var(--themeColor);
 }
 
 @media (min-width: 700px) {
     .contact h2 {
-        justify-content: flex-start;
-        align-items: flex-end;
         font-size: 2em;
+        align-items: flex-end;
+        justify-content: flex-start;
     }
 
     .contact .box {
         padding-right: 32px;
-        grid-template-columns: 1fr 2fr;
         border-top-right-radius: 10px;
+        grid-template-columns: 1fr 2fr;
         border-bottom-right-radius: 10px;
     }
 
@@ -959,6 +960,24 @@ header {
         font-size: 1.2em;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .contact .box {
+        width: 107%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .contact .box form {
+        width: 86%;
+    }
+
+    .contact .box .info {
+        padding-top: 15px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 }
 
