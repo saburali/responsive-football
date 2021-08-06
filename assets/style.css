@@ -35,6 +35,10 @@ a {
     border-radius: 8px;
 }
 
+.btn i {
+    padding-left: 10px;
+}
+
 .title {
     font-size: 64px;
     line-height: 80px;
@@ -57,9 +61,60 @@ a {
 
 .half-width {
     width: 50%;
+    text-align: center;
 }
 
-.common-width {
-    width: 1140px;
-    margin: 0 auto;
+.text-left {
+    text-align: left;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/****************************\
+     Banner Section Start
+\****************************/
+.banner {
+    background-color: #2D25A0;
+}
+
+.banner-content {
+    height: 60vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-content .half-width:first-child {
+    padding-left: 50px;
+}
+
+.banner-content h1 {
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.banner-content img {
+    width: 70%;
 }
